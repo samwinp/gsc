@@ -1,9 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:vac_app/pages/home_page.dart';
 import 'package:vac_app/pages/login_page.dart';
 import 'firebase_options.dart';
 import 'helper/helper_function.dart';
+
 
 void main() async {
   // to ensure that the widget is initialized
@@ -57,10 +59,11 @@ class _MyAppState extends State<MyApp> {
      theme: ThemeData(
       primaryColor: Colors.black87,
      ),
-     home:  const LoginPage(),
+     home:  LoginPage(),
     );
   }
 }
+
 
 
 

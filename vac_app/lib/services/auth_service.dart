@@ -41,7 +41,7 @@ class AuthService{
   }
 
 
-  //sign out
+  //sign out can you hear me ? reply here --
   Future singOut() async{
     try{
       await HelperFunctions.saveUserLoggedInStatus(false);
@@ -50,7 +50,7 @@ class AuthService{
       await firebaseAuth.signOut(); 
 
     }catch(e){
-
+      print("dead");
     }
 
   }
