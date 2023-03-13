@@ -57,6 +57,7 @@ class _MyAppState extends State<MyApp> {
     return  MaterialApp(      
      debugShowCheckedModeBanner: false,
      theme: ThemeData(
+      brightness: Brightness.dark,
       primaryColor: Colors.black87,
      ),
      home:  LoginPage(),

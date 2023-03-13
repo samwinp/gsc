@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:vac_app/pages/vaccine_info.dart';
 
 import '../helper/helper_function.dart';
 import '../services/auth_service.dart';
@@ -45,26 +46,27 @@ class _TestingPageState extends State<TestingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        backgroundColor: Colors.red,        
+        backgroundColor: Colors.transparent,        
         title: Text('Vaxi'),
         elevation: 0,
         ),
 
               drawer: Drawer(
-          backgroundColor:const Color.fromARGB(225, 255, 255, 255),
+          backgroundColor: Colors.grey[900],
           child: ListView(
             padding: const EdgeInsets.symmetric(vertical: 50),
             children:  [
               const Icon(Icons.account_circle,
               size: 100,
-              color: Colors.white,
+              color: Colors.grey,
               ),
               const SizedBox(height: 10,),
               Center(
                 child: Text(userName, 
                 style: const TextStyle(                 
-                  color: Color.fromARGB(255, 0, 0, 0),
+                  color: Color.fromARGB(255, 255, 255, 255),
                   fontWeight: FontWeight.bold, 
                   fontSize: 20,                  
                 ),                      
@@ -75,9 +77,7 @@ class _TestingPageState extends State<TestingPage> {
               height: 2,
             ),
            
-            const Divider(
-              height: 2,
-            ),
+           
            
             const Divider(height: 2,),
 
@@ -119,11 +119,25 @@ class _TestingPageState extends State<TestingPage> {
               leading:const Icon(Icons.logout),
               title:const Text("Logout", 
               style: TextStyle(
-              color: Colors.black,
+              color: Color.fromARGB(255, 255, 255, 255),
               ),              
-              ),         
+              ),  
+                    
 
+            ),
+             
+            const Divider(height: 2,), 
+            const ListTile(
+            leading: Icon(Icons.settings),
+            title: Text("Settings",
+             style: TextStyle(
+              color: Color.fromARGB(255, 255, 255, 255),
+              ),              
+            ),
             )
+            
+
+
             ],
           ),
         ),
@@ -148,6 +162,61 @@ class _TestingPageState extends State<TestingPage> {
                   
          ],
         ),
+      
+
+      body: Column(
+        children: [
+           const Padding(
+          padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+          child: Text(
+            "Welcome, To Vaxi",
+            style: TextStyle(
+             fontWeight: FontWeight.bold,
+             color: Color.fromARGB(255, 255, 45, 45),
+             fontSize: 50,
+            ),
+          ),
+        ),
+        const SizedBox(height: 15,),
+
+        const Align(
+          alignment: Alignment.topLeft,
+          child: Text("     Vacination Articles",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold
+                ),
+                ),
+        ),
+
+        SizedBox(
+          height: 10,
+        ),
+        
+        Container(
+     
+        height: 350,
+        child: Align(
+          child: ListView(
+    
+          scrollDirection: Axis.horizontal,
+          children:          
+            const [                         
+            VaccineInfo(),
+            VaccineInfo(),
+            VaccineInfo(),           
+           ],
+          ),
+        ),      
+       ),
+        
+
+
+        ],
+      )
+      
+       
       
     );
   }
