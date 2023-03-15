@@ -6,7 +6,12 @@ import 'package:vac_app/widgets/widgets.dart';
 
 
 class VaccineInfo extends StatefulWidget {
-  const VaccineInfo({super.key});
+  late String vacInfo;
+  late String vacName;
+   VaccineInfo({super.key,required String vacInfo,required String vacName}){
+   this.vacInfo = vacInfo;
+   this.vacName = vacName;
+  }
 
   @override
   State<VaccineInfo> createState() => _VaccineInfoState();
@@ -18,7 +23,8 @@ class _VaccineInfoState extends State<VaccineInfo> {
     return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  width: 210,                                       
+                  width: 180,
+                  height: 230,                                       
                   decoration:  BoxDecoration(
                     border: Border.all(width: 8),
                     color: Colors.black,
@@ -35,10 +41,10 @@ class _VaccineInfoState extends State<VaccineInfo> {
 
                         ),    
                       const SizedBox(height: 10,),                        
-                      const Align(
+                      Align(
                         alignment: Alignment.topLeft,
-                        child: Text("Bcg",
-                        style: TextStyle(
+                        child: Text(widget.vacName,
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         
@@ -46,10 +52,10 @@ class _VaccineInfoState extends State<VaccineInfo> {
                         ),
                       ),
                       const SizedBox(height: 5,),
-                      const Align(
+                       Align(
                         alignment: Alignment.topLeft,
-                        child: Text("This is a vaccine and it's info is",
-                        style: TextStyle(
+                        child: Text(widget.vacInfo,
+                        style: const TextStyle(
                           fontSize: 14,
                           color: Colors.grey,
                         ),

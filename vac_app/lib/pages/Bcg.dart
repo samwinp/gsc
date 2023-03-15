@@ -13,7 +13,7 @@ class _BgcState extends State<Bgc> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Vaxi")),
+      
       body: TextButton(
         onPressed: () {
           nextScreenReplace(context, const HomePage());
