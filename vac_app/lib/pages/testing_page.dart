@@ -3,7 +3,6 @@ import 'package:vac_app/pages/Bcg.dart';
 import 'package:vac_app/pages/landin_page.dart';
 import 'package:vac_app/pages/map_page.dart';
 import 'package:vac_app/pages/vaccine_info.dart';
-
 import '../helper/helper_function.dart';
 import '../services/auth_service.dart';
 import '../widgets/widgets.dart';
