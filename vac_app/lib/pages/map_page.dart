@@ -16,16 +16,22 @@ class _MapPageState extends State<MapPage> {
 
   // this is the inital pos of the map
   static const CameraPosition _initialCameraPostion = CameraPosition(
-    target: LatLng(12.880388, 74.84990),
+    target: LatLng(12.924416, 79.115194),
     zoom: 11.4,
   );
   
   // user for creating the danger areas
   List<LatLng> polyPoints = [
-    LatLng(12.890386, 74.848936),
-    LatLng(12.889748, 74.848002),
-    LatLng(12.888660, 74.848356),
-    LatLng(12.889434, 74.849719),
+    LatLng(12.895953, 79.056542),
+    LatLng(12.917705, 79.039719),
+    LatLng(12.931759, 79.091904),
+    LatLng(12.964215, 79.115250),
+    LatLng(13.001684, 79.127266),
+    LatLng(12.981277, 79.161255),
+    LatLng(12.927075, 79.183228),
+    LatLng(12.896957, 79.154732),
+    LatLng(12.835037, 79.163315),
+    LatLng(12.797208, 79.127610),
    
   ];
 
@@ -48,7 +54,7 @@ class _MapPageState extends State<MapPage> {
         markers: {
           Marker(
             markerId: MarkerId("this feeling is horible"),
-            position: LatLng(12.890344, 74.848335),
+            position: LatLng(12.924416, 79.115194),
             draggable: true,
             onDrag: (value){
              checkUpdatedLocation(value);

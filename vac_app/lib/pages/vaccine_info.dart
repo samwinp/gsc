@@ -1,16 +1,18 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:vac_app/pages/Bcg.dart';
+import 'package:vac_app/pages/chicken_pox.dart';
+import 'package:vac_app/pages/typhoid.dart';
 import 'package:vac_app/widgets/widgets.dart';
 
 
 class VaccineInfo extends StatefulWidget {
   late String vacInfo;
   late String vacName;
-   VaccineInfo({super.key,required String vacInfo,required String vacName}){
+  late dynamic page;
+   VaccineInfo({super.key,required String vacInfo,required String vacName,required dynamic page}){
    this.vacInfo = vacInfo;
    this.vacName = vacName;
+   this.page = page;
   }
 
   @override
@@ -71,7 +73,8 @@ class _VaccineInfoState extends State<VaccineInfo> {
                           Align(
                             alignment: Alignment.bottomLeft,
                             child: TextButton(onPressed: (){
-                              nextScreenReplace(context, const Bgc());
+                              dynamic route = widget.page;
+                              nextScreenReplace(context,  route);
                             },
                              child: const Text("Read more"),
                             ),

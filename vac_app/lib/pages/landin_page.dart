@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vac_app/pages/Bcg.dart';
+import 'package:vac_app/pages/chicken_pox.dart';
+import 'package:vac_app/pages/typhoid.dart';
 import 'package:vac_app/pages/vaccine_info.dart';
 
 
@@ -47,9 +50,9 @@ class _LandingPageState extends State<LandingPage> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children:  [
-                    VaccineInfo(vacInfo: "The BCG vaccine is made from a weakened strain of TB bacteria", vacName: "BGC",),
-                    VaccineInfo(vacInfo: "Chickenpox is an infection caused by the varicella-zoster virus",vacName: "Chicked Pox",),
-                    VaccineInfo(vacInfo: "Typhoid fever is a bacterial infection causing high fevers", vacName: "Ty21a",),
+                    VaccineInfo(vacInfo: "The BCG vaccine is made from a weakened strain of TB bacteria", vacName: "BGC",page: BgcVaccineInfoPage(),),
+                    VaccineInfo(vacInfo: "Chickenpox is an infection caused by the varicella-zoster virus",vacName: "Chicked Pox",page:ChickenpoxVaccineInfoPage(),),
+                    VaccineInfo(vacInfo: "Typhoid fever is a bacterial infection causing high fevers", vacName: "Ty21a",page: TyphoidVaccineInfoPage(),),
                   ],
                 ),
               ),
