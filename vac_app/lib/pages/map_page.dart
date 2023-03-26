@@ -31,9 +31,13 @@ class _MapPageState extends State<MapPage> {
     LatLng(12.927075, 79.183228),
     LatLng(12.896957, 79.154732),
     LatLng(12.835037, 79.163315),
-    LatLng(12.797208, 79.127610),
-   
+    LatLng(12.797208, 79.127610),   
   ];
+
+  
+
+
+  
 
   // to check if the location is safe when the marker is moved 
   void checkUpdatedLocation(LatLng pointLatLng){
@@ -68,18 +72,19 @@ class _MapPageState extends State<MapPage> {
             points: polyPoints,
             fillColor:  Color.fromARGB(0, 219, 2, 2).withOpacity(0.2),
             strokeWidth: 2,
-          )
+          ),
+          
         },
 
       ),
        
       Positioned(
-       top: 500,
+       top: 625,
        left: 5,
        child: Container(
         height: 100,
         width: 330,
-        child: isSafe ?  ShowWarn(name: "This area has Typi pls take vaxi") : ShowWarn(name: "good to go"),
+        child: isSafe ?  ShowWarn(name: "This area has typhod consider taking ty21a vaccine") : ShowWarn(name: "good to go"),
        ),
       )
       ]

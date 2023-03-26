@@ -127,7 +127,8 @@ class _LoginPageState extends State<LoginPage> {
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: textInputDecoration.copyWith(
+                  obscureText: true,
+                  decoration: textInputDecoration.copyWith(                    
                     labelText: 'Password',
                     prefixIcon: const Icon(
                       Icons.lock,
