@@ -84,7 +84,7 @@ class _MapPageState extends State<MapPage> {
        child: Container(
         height: 100,
         width: 330,
-        child: isSafe ?  ShowWarn(name: "This area has typhod consider taking ty21a vaccine") : ShowWarn(name: "good to go"),
+        child: isSafe ?  ShowWarn(name: "This area has typhoid consider taking ty21a vaccine") : ShowWarn(name: "good to go"),
        ),
       )
       ]
