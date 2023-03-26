@@ -6,7 +6,6 @@ import 'package:vac_app/pages/login_page.dart';
 import 'firebase_options.dart';
 import 'helper/helper_function.dart';
 
-
 void main() async {
   // to ensure that the widget is initialized
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +15,6 @@ void main() async {
 
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -57,6 +55,7 @@ class _MyAppState extends State<MyApp> {
     return  MaterialApp(      
      debugShowCheckedModeBanner: false,
      theme: ThemeData(
+      brightness: Brightness.dark,
       primaryColor: Colors.black87,
      ),
      home:  LoginPage(),
